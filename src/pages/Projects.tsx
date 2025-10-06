@@ -29,9 +29,9 @@ const projects: Project[] = [
   },
   {
     title: 'CourseFlow - Assignment Management System',
-    timeframe: 'August 2025 - Present',
+    timeframe: 'Aug 2025 - Present',
     summary:
-      'Productivity platform built to streamline student course planning with secure authentication and task management.',
+      'Productivity platform engineered to streamline student course planning with secure authentication and task management.',
     details: [
       'Architected a full-stack Next.js application with TypeScript, feature-based organization, and reusable UI components.',
       'Implemented authentication with NextAuth.js, Prisma ORM for database management, and form validation via TypeScript interfaces.',
@@ -42,7 +42,7 @@ const projects: Project[] = [
   },
   {
     title: 'Lift Fitness Tracker - Gamified Workout Management',
-    timeframe: 'August 2025 - Present',
+    timeframe: 'Aug 2025 - Present',
     summary:
       'Gamified workout companion with ranking systems, workout templates, and live tracking tools.',
     details: [
@@ -57,42 +57,46 @@ const projects: Project[] = [
 
 const Projects = () => {
   return (
-    <section>
-      <h1 className="page-heading">Projects</h1>
+    <section className="page projects-page">
+      <header className="page-header">
+        <span className="eyebrow">Selected Work</span>
+        <h1 className="page-heading">Projects</h1>
+        <p className="page-subtitle">
+          A curated highlight of recent builds that blend analytics, automation, and tactile interface
+          design.
+        </p>
+      </header>
+
       <ul className="list-reset projects-grid">
         {projects.map((project) => (
-          <li key={project.title} className="content-card">
-            <article>
-              <header>
-                <h2 className="section-subtitle">{project.title}</h2>
-                <p className="section-meta">{project.timeframe}</p>
-              </header>
-              <p>{project.summary}</p>
-              {project.details && (
-                <ul className="project-details">
-                  {project.details.map((detail) => (
-                    <li key={detail}>{detail}</li>
-                  ))}
-                </ul>
-              )}
-              <div className="tech-stack">
-                {project.tech.map((tech) => (
-                  <span className="tech-tag" key={tech}>
-                    {tech}
-                  </span>
+          <li key={project.title} className="content-card project-card">
+            <span className="eyebrow">{project.timeframe}</span>
+            <h2 className="section-title">{project.title}</h2>
+            <p className="project-summary">{project.summary}</p>
+            {project.details && (
+              <ul className="project-details">
+                {project.details.map((detail) => (
+                  <li key={detail}>{detail}</li>
+                ))}
+              </ul>
+            )}
+            <div className="tech-stack">
+              {project.tech.map((tech) => (
+                <span className="tech-tag" key={tech}>
+                  {tech}
+                </span>
+              ))}
+            </div>
+            {project.links.length > 0 && (
+              <div className="project-links">
+                {project.links.map((link) => (
+                  <a key={link.href} href={link.href} target="_blank" rel="noreferrer">
+                    <i className="fas fa-external-link-alt" aria-hidden="true" />
+                    {link.label}
+                  </a>
                 ))}
               </div>
-              {project.links.length > 0 && (
-                <div className="project-links">
-                  {project.links.map((link) => (
-                    <a key={link.href} href={link.href} target="_blank" rel="noreferrer">
-                      <i className="fas fa-external-link-alt" aria-hidden="true" />
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </article>
+            )}
           </li>
         ))}
       </ul>

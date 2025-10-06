@@ -5,7 +5,7 @@ const education = {
   gpa: 'GPA 3.5 / 4.0',
   details: [
     'Relevant Coursework: Programming and Logic, Introduction to Computers, Python Programming, Data Structures and Algorithms, Java Programming.',
-    'Honors and Awards: Dean\'s List (Spring 2025).',
+    "Honors and Awards: Dean's List (Spring 2025).",
   ],
 };
 
@@ -14,19 +14,19 @@ const experiences = [
     company: 'SERNAIS',
     location: 'Charlotte, NC',
     role: 'Freelance Full-Stack Developer',
-    timeframe: 'April 2025 - August 2025',
+    timeframe: 'Apr 2025 - Aug 2025',
     bullets: [
       'Engineered a full-stack e-commerce platform for an independent fashion brand using Flask, JavaScript, and SQLite.',
       'Implemented user authentication, a persistent shopping cart, and dynamic product rendering from a SQLite database.',
-      'Partnered with the client to translate business requirements and brand vision into technical specifications.',
-      'Managed the complete development lifecycle from concept and database design to deployment and version control with Git.',
+      'Partnered with the client to translate business requirements and brand vision into detailed technical specifications.',
+      'Managed the development lifecycle from concept and database design to deployment and version control with Git.',
     ],
   },
   {
     company: 'Harris Teeter',
     location: 'Charlotte, NC',
     role: 'Cashier / Bagger',
-    timeframe: 'September 2021 - January 2024',
+    timeframe: 'Sep 2021 - Jan 2024',
     bullets: [
       'Delivered dependable customer support in a fast-paced retail environment while adapting between cashier and bagger roles.',
       'Trained new hires on point-of-sale systems and customer service protocols to improve team readiness during peak hours.',
@@ -34,34 +34,56 @@ const experiences = [
   },
 ];
 
+const heroHighlights = [
+  'Python & TypeScript Ecosystems',
+  'Interface Architecture & Automation',
+  'Available for 2025 Internships',
+];
+
 const Home = () => {
   return (
-    <section>
-      <header>
-        <h1 className="page-heading">Joshua Benitez-Torres</h1>
-        <p className="page-subtitle">Full-stack developer and computer science student based in Charlotte, NC.</p>
-      </header>
-      <div className="content-card intro-container">
-        <p>
-          I am a developer focused on building data-informed applications that balance user
-          experience with reliable architecture. My current work centers on Python and TypeScript
-          ecosystems, with experience delivering production-grade web platforms for clients and
-          student-led initiatives.
+    <section className="page home-page">
+      <div className="home-hero">
+        <span className="eyebrow">Charlotte - North Carolina</span>
+        <h1 className="hero-title">Joshua Benitez-Torres</h1>
+        <p className="hero-lede">
+          Full-stack developer and computer science student shaping precise, data-informed digital
+          products for brands and teams that value polish.
         </p>
-        <p>
-          I thrive on projects that bridge analytics, automation, and clean interface design. This
-          portfolio highlights my recent experience, coursework, and the technical skills I bring to
-          collaborative engineering teams.
-        </p>
+        <div className="hero-meta">
+          {heroHighlights.map((highlight) => (
+            <span key={highlight}>{highlight}</span>
+          ))}
+        </div>
       </div>
 
-      <div className="home-grid">
+      <article className="content-card intro-statement">
+        <div className="section-header">
+          <span className="eyebrow">Studio Statement</span>
+          <h2 className="section-title">Designing experiences with intention and technical rigor</h2>
+        </div>
+        <div className="intro-stack">
+          <p>
+            I build applications that align elevated interfaces with dependable engineering. From
+            producing ecommerce platforms to leading student-led products, my work centers on
+            crafting tactile user journeys that feel effortless.
+          </p>
+          <p>
+            The portfolio below pairs academic achievements with practical engagements to
+            demonstrate how I translate research, analytics, and collaboration into refined,
+            production-ready solutions.
+          </p>
+        </div>
+      </article>
+
+      <div className="home-panels">
         <article className="content-card">
           <header className="section-header">
-            <h2 className="section-subtitle">Education</h2>
+            <span className="eyebrow">Education</span>
+            <h2 className="section-title">{education.program}</h2>
             <p className="section-meta">{education.institution} | {education.timeframe}</p>
           </header>
-          <p className="section-highlight">{education.program} | {education.gpa}</p>
+          <p className="section-highlight">{education.gpa}</p>
           <ul className="detail-list">
             {education.details.map((item) => (
               <li key={item}>{item}</li>
@@ -71,7 +93,8 @@ const Home = () => {
 
         <article className="content-card">
           <header className="section-header">
-            <h2 className="section-subtitle">Experience</h2>
+            <span className="eyebrow">Experience</span>
+            <h2 className="section-title">Delivering polish end-to-end</h2>
           </header>
           <ul className="list-reset experience-list">
             {experiences.map((experience) => (

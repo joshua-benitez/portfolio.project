@@ -9,7 +9,7 @@ const skillCategories: SkillCategory[] = [
     items: ['Java', 'Python', 'JavaScript', 'TypeScript', 'HTML', 'CSS'],
   },
   {
-    title: 'Frameworks and Tools',
+    title: 'Frameworks & Tooling',
     items: [
       'FastAPI',
       'Flask',
@@ -24,20 +24,34 @@ const skillCategories: SkillCategory[] = [
       'Tailwind CSS',
       'SQLite',
       'PostgreSQL',
-      'Git and GitHub',
+      'Git & GitHub',
     ],
   },
 ];
 
 const Skills = () => {
   return (
-    <section>
-      <h1 className="page-heading">Skills</h1>
+    <section className="page skills-page">
+      <header className="page-header">
+        <span className="eyebrow">Core Capabilities</span>
+        <h1 className="page-heading">Skills</h1>
+        <p className="page-subtitle">
+          The technical toolkit I lean on to deliver products with precision, performance, and polish.
+        </p>
+      </header>
+
       <ul className="list-reset skills-grid">
         {skillCategories.map((category) => (
           <li key={category.title} className="content-card">
-            <h2 className="section-subtitle">{category.title}</h2>
-            <p>{category.items.join(', ')}</p>
+            <header className="section-header">
+              <span className="eyebrow">{category.title}</span>
+              <h2 className="section-title">{category.title}</h2>
+            </header>
+            <ul className="skills-columns">
+              {category.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </li>
         ))}
       </ul>

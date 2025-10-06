@@ -39,6 +39,16 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="app-shell">
       <header className="app-header">
+        <div className="brand-lockup">
+          <span className="brand-mark" aria-hidden="true">
+            JB
+          </span>
+          <div className="brand-copy">
+            <p className="brand-title">Joshua Benitez-Torres</p>
+            <p className="brand-tagline">Full-Stack Developer</p>
+          </div>
+        </div>
+
         <nav className="main-nav">
           {navLinks.map((link) => (
             <NavLink
@@ -53,14 +63,15 @@ const Layout = ({ children }: LayoutProps) => {
             </NavLink>
           ))}
         </nav>
-        <div className="contact-cluster">
+
+        <div className="header-cta">
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              isActive ? 'nav-link contact-link nav-link-active' : 'nav-link contact-link'
+              isActive ? 'cta-button cta-active' : 'cta-button'
             }
           >
-            Contact Information
+            Start a Project
           </NavLink>
           <div className="social-icons">
             {socialLinks.map((link) => (
@@ -72,9 +83,22 @@ const Layout = ({ children }: LayoutProps) => {
           </div>
         </div>
       </header>
+
       <main className="app-main">{children}</main>
+
       <footer className="app-footer">
-        <p>Copyright 2024 Joshua Benitez-Torres | All Rights Reserved</p>
+        <div className="footer-grid">
+          <span>Portfolio 2024</span>
+          <p>Crafted in Charlotte, North Carolina.</p>
+          <div className="footer-social">
+            {socialLinks.map((link) => (
+              <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
+                <span className="sr-only">{link.label}</span>
+                <i className={link.icon} aria-hidden="true" />
+              </a>
+            ))}
+          </div>
+        </div>
       </footer>
     </div>
   );
