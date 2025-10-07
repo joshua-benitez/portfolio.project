@@ -14,20 +14,6 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'SlipSense',
-    timeframe: 'June - July 2025',
-    summary:
-      'Full-stack web application demonstrating sports betting analysis with statistical modeling and simulated datasets.',
-    details: [
-      'Built a Python and FastAPI backend exposing REST APIs for multi-sport probability modeling.',
-      'Developed a responsive React and Next.js frontend with TypeScript components and real-time data visualizations.',
-      'Implemented Poisson distribution models and probability calculations with NumPy and SciPy.',
-      'Designed a deployable architecture on Vercel and Render, ready for live sports data integration.',
-    ],
-    tech: ['Python', 'FastAPI', 'Next.js', 'React', 'TypeScript', 'Pandas', 'NumPy'],
-    links: [],
-  },
-  {
     title: 'CourseFlow',
     timeframe: 'Aug 2025 - Present',
     summary:
@@ -38,7 +24,9 @@ const projects: Project[] = [
       'Delivered responsive layouts and CRUD workflows optimized for desktop and mobile study sessions.',
     ],
     tech: ['Next.js', 'TypeScript', 'React', 'Prisma', 'NextAuth.js'],
-    links: [],
+    links: [
+      { label: 'Live Demo', href: 'https://courseflow-alpha.vercel.app' },
+    ],
   },
   {
     title: 'Lift Fitness Tracker',
@@ -51,7 +39,9 @@ const projects: Project[] = [
       'Developed an Express and SQLite API with JWT authentication plus endpoints for sessions, history, and seeded push-pull templates.',
     ],
     tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Express', 'SQLite'],
-    links: [],
+    links: [
+      { label: 'Live Demo', href: 'https://lift-kappa.vercel.app' },
+    ],
   },
 ];
 
