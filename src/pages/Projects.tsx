@@ -40,7 +40,7 @@ const projects: Project[] = [
     ],
     tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Express', 'SQLite'],
     links: [
-      { label: 'Live Demo', href: 'https://lift-kappa.vercel.app' },
+      { label: 'Live Demo', href: 'https://lift-km17.vercel.app' },
     ],
   },
 ];
