@@ -14,7 +14,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'SlipSense - Full Stack Sports Analytics Demo Platform',
+    title: 'SlipSense',
     timeframe: 'June - July 2025',
     summary:
       'Full-stack web application demonstrating sports betting analysis with statistical modeling and simulated datasets.',
@@ -28,7 +28,7 @@ const projects: Project[] = [
     links: [],
   },
   {
-    title: 'CourseFlow - Assignment Management System',
+    title: 'CourseFlow',
     timeframe: 'Aug 2025 - Present',
     summary:
       'Productivity platform engineered to streamline student course planning with secure authentication and task management.',
@@ -41,7 +41,7 @@ const projects: Project[] = [
     links: [],
   },
   {
-    title: 'Lift Fitness Tracker - Gamified Workout Management',
+    title: 'Lift Fitness Tracker',
     timeframe: 'Aug 2025 - Present',
     summary:
       'Gamified workout companion with ranking systems, workout templates, and live tracking tools.',

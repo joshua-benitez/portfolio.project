@@ -78,24 +78,26 @@ const Home = () => {
 
       <div className="home-panels">
         <article className="content-card">
-          <header className="section-header">
-            <span className="eyebrow">Education</span>
-            <h2 className="section-title">{education.program}</h2>
-            <p className="section-meta">{education.institution} | {education.timeframe}</p>
-          </header>
-          <p className="section-highlight">{education.gpa}</p>
-          <ul className="detail-list">
-            {education.details.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
+          <span className="eyebrow">Education</span>
+          <ul className="list-reset experience-list">
+            <li className="experience-item">
+              <div className="section-meta">
+                <span>{education.institution}</span>
+                <span>{education.timeframe}</span>
+              </div>
+              <p className="section-highlight">{education.program}</p>
+              <p className="section-highlight">{education.gpa}</p>
+              <ul className="detail-list">
+                {education.details.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </li>
           </ul>
         </article>
 
         <article className="content-card">
-          <header className="section-header">
-            <span className="eyebrow">Experience</span>
-            <h2 className="section-title">Delivering polish end-to-end</h2>
-          </header>
+          <span className="eyebrow">Experience</span>
           <ul className="list-reset experience-list">
             {experiences.map((experience) => (
               <li key={experience.company} className="experience-item">

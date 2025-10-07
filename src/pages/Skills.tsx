@@ -43,10 +43,7 @@ const Skills = () => {
       <ul className="list-reset skills-grid">
         {skillCategories.map((category) => (
           <li key={category.title} className="content-card">
-            <header className="section-header">
-              <span className="eyebrow">{category.title}</span>
-              <h2 className="section-title">{category.title}</h2>
-            </header>
+            <span className="eyebrow">{category.title}</span>
             <ul className="skills-columns">
               {category.items.map((item) => (
                 <li key={item}>{item}</li>
