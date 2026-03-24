@@ -44,7 +44,7 @@ const Layout = ({ children }: LayoutProps) => {
             JB
           </span>
           <div className="brand-copy">
-            <p className="brand-title">Joshua Benitez-Torres</p>
+            <p className="brand-title">Joshua Alejandro Benitez-Torres</p>
             <p className="brand-tagline">Full-Stack Developer</p>
           </div>
         </div>
@@ -65,14 +65,6 @@ const Layout = ({ children }: LayoutProps) => {
         </nav>
 
         <div className="header-cta">
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              isActive ? 'cta-button cta-active' : 'cta-button'
-            }
-          >
-            Start a Project
-          </NavLink>
           <div className="social-icons">
             {socialLinks.map((link) => (
               <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
@@ -88,7 +80,7 @@ const Layout = ({ children }: LayoutProps) => {
 
       <footer className="app-footer">
         <div className="footer-grid">
-          <span>Portfolio 2024</span>
+          <span>Portfolio 2026</span>
           <p>Crafted in Charlotte, North Carolina.</p>
           <div className="footer-social">
             {socialLinks.map((link) => (

@@ -14,33 +14,44 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: 'PrimeLab',
+    timeframe: 'Jan 2026 - Present',
+    summary:
+      'LeetCode-style platform in development where every problem is designed to test behavior, not implementation, across browser, React, and Python execution environments.',
+    details: [
+      'Built a coding assessment platform around one constraint: every problem must test behavior, not implementation, so the judge evaluates outcomes such as DOM state, API responses, and test results.',
+      'Designed a rule-handler registry for browser problems where new test logic is added through problem-specific handlers and metadata without modifying the core judge engine.',
+      'Engineered an async submission pipeline where FastAPI queues jobs to Redis, an isolated Pytest worker executes user code, and the frontend polls for structured pass/fail verdicts.',
+    ],
+    tech: ['Next.js', 'TypeScript', 'FastAPI', 'PostgreSQL', 'Zod', 'Redis', 'Docker'],
+    links: [{ label: 'In Development', href: '#' }],
+  },
+  {
+    title: 'Taper',
+    timeframe: 'Oct 2025 - Present',
+    summary:
+      'Body composition tracker built around the idea that waist measurements and weight trends together tell a truer fat-loss story than the scale alone.',
+    details: [
+      'Built around one insight: the scale lies, so Taper tracks waist measurements alongside weight and uses 7-day trend smoothing to reduce daily noise.',
+      'Implemented domain-specific fitness calculations from scratch, including Mifflin-St Jeor BMR, the Hodgdon and Beckett Navy body-fat method, and TDEE-based calorie targets, served through FastAPI with PostgreSQL and SQLAlchemy.',
+      'Built JWT authentication with access and refresh token rotation plus an interactive dashboard featuring trend lines, macro tracking, and projected goal-date estimation using Recharts.',
+    ],
+    tech: ['Next.js', 'TypeScript', 'FastAPI', 'PostgreSQL', 'SQLAlchemy'],
+    links: [{ label: 'Live Demo', href: 'https://www.taper.dev' }],
+  },
+  {
     title: 'CourseFlow',
     timeframe: 'Aug 2025 - Present',
     summary:
-      'Productivity platform engineered to streamline student course planning with secure authentication and task management.',
+      'Assignment planner that parses course syllabi and generates ranked task lists based on urgency, difficulty, and grade impact.',
     details: [
-      'Architected a full-stack Next.js application with TypeScript, feature-based organization, and reusable UI components.',
-      'Implemented authentication with NextAuth.js, Prisma ORM for database management, and form validation via TypeScript interfaces.',
-      'Delivered responsive layouts and CRUD workflows optimized for desktop and mobile study sessions.',
+      'Engineered a prioritization system that surfaces critical deadlines and quick-win tasks across a student’s full course load instead of treating all assignments equally.',
+      'Built a dashboard with course filters, due-date grouping, and rank progression mechanics that incentivize consistent assignment completion and on-time work.',
+      'Shipped the app as a deployed academic planning product with authenticated student workflows.',
     ],
     tech: ['Next.js', 'TypeScript', 'React', 'Prisma', 'NextAuth.js'],
     links: [
       { label: 'Live Demo', href: 'https://courseflow-alpha.vercel.app' },
-    ],
-  },
-  {
-    title: 'Lift Fitness Tracker',
-    timeframe: 'Aug 2025 - Present',
-    summary:
-      'Gamified workout companion with ranking systems, workout templates, and live tracking tools.',
-    details: [
-      'Created a game-inspired Next.js interface with Tailwind CSS, custom SVG rank badges, and dashboard panels.',
-      'Implemented workout flows with template selection, live set tracking, rest timers, and streak calculations persisted locally when offline.',
-      'Developed an Express and SQLite API with JWT authentication plus endpoints for sessions, history, and seeded push-pull templates.',
-    ],
-    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Express', 'SQLite'],
-    links: [
-      { label: 'Live Demo', href: 'https://lift-km17.vercel.app' },
     ],
   },
 ];

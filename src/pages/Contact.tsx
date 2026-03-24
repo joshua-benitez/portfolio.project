@@ -32,8 +32,8 @@ const Contact = () => {
         <span className="eyebrow">Connect</span>
         <h1 className="page-heading">Contact</h1>
         <p className="page-subtitle">
-          Ready to collaborate on refined digital products. Reach out directly and I'll respond within
-          two business days.
+          Reach out for freelance, internship, or collaborative software opportunities. I can be
+          contacted directly through any of the channels below.
         </p>
       </header>
 

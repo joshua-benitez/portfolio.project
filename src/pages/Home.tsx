@@ -1,13 +1,24 @@
-const education = {
-  institution: 'Central Piedmont Community College',
-  program: 'A.A. in Computer Science Pathway',
-  timeframe: 'Aug 2024 - May 2026',
-  gpa: 'GPA 3.5 / 4.0',
-  details: [
-    'Relevant Coursework: Programming and Logic, Introduction to Computers, Python Programming, Data Structures and Algorithms, Java Programming.',
-    "Honors and Awards: Dean's List (Spring 2025).",
-  ],
-};
+const education = [
+  {
+    institution: 'Central Piedmont Community College',
+    location: 'Charlotte, NC',
+    program: 'A.A. in Computer Science Pathway',
+    timeframe: 'Expected May 2026',
+    detail: 'GPA 3.3 / 4.0',
+  },
+  {
+    institution: 'University of North Carolina at Charlotte',
+    location: 'Charlotte, NC',
+    program: 'B.S. in Computer Science',
+    timeframe: 'Expected May 2028',
+    detail: 'Incoming Transfer Student (Fall 2026)',
+  },
+];
+
+const educationNotes = [
+  'Relevant Coursework: Data Structures & Algorithms, Python Programming, Java Programming, Advanced Java Programming.',
+  "Honors & Awards: Dean's List (Spring 2025); Phi Theta Kappa Honor Society (Phi Lambda Chapter, 2025).",
+];
 
 const experiences = [
   {
@@ -16,28 +27,29 @@ const experiences = [
     role: 'Freelance Full-Stack Developer',
     timeframe: 'Apr 2025 - Aug 2025',
     bullets: [
-      'Engineered a full-stack e-commerce platform for an independent fashion brand using Flask, JavaScript, and SQLite.',
-      'Implemented user authentication, a persistent shopping cart, and dynamic product rendering from a SQLite database.',
-      'Partnered with the client to translate business requirements and brand vision into detailed technical specifications.',
-      'Managed the development lifecycle from concept and database design to deployment and version control with Git.',
+      'Engineered a production-ready full-stack e-commerce platform for a startup fashion brand using Flask, JavaScript, and SQLite.',
+      'Implemented user authentication, persistent shopping cart, and dynamic product rendering from a SQLite database.',
+      'Translated client requirements and brand vision into technical specifications across the full development lifecycle.',
+      'Delivered a scalable foundation for future product launch and iteration.',
     ],
   },
   {
     company: 'Harris Teeter',
     location: 'Charlotte, NC',
-    role: 'Cashier / Bagger',
+    role: 'Customer Service Clerk',
     timeframe: 'Sep 2021 - Jan 2024',
     bullets: [
-      'Delivered dependable customer support in a fast-paced retail environment while adapting between cashier and bagger roles.',
-      'Trained new hires on point-of-sale systems and customer service protocols to improve team readiness during peak hours.',
+      'Assisted in training new cashiers, sharing best practices and company policies to enhance team performance.',
+      'Promoted store loyalty programs and special promotions, resulting in a 15% increase in customer enrollments.',
+      'Accurately processed transactions, including cash, credit, and debit payments, ensuring 100% register balance accuracy at the end of each shift.',
     ],
   },
 ];
 
 const heroHighlights = [
-  'Python & TypeScript Ecosystems',
-  'Interface Architecture & Automation',
-  'Available for 2025 Internships',
+  'React, Next.js, FastAPI',
+  'Production-Minded Full-Stack Builds',
+  'Available for 2026 Opportunities',
 ];
 
 const Home = () => {
@@ -45,10 +57,10 @@ const Home = () => {
     <section className="page home-page">
       <div className="home-hero">
         <span className="eyebrow">Charlotte - North Carolina</span>
-        <h1 className="hero-title">Joshua Benitez-Torres</h1>
+        <h1 className="hero-title">Joshua Alejandro Benitez-Torres</h1>
         <p className="hero-lede">
-          Full-stack developer and computer science student shaping precise, data-informed digital
-          products for brands and teams that value polish.
+          Full-stack developer and computer science student building software products with strong
+          backend systems, clear interfaces, and practical real-world value.
         </p>
         <div className="hero-meta">
           {heroHighlights.map((highlight) => (
@@ -64,14 +76,13 @@ const Home = () => {
         </div>
         <div className="intro-stack">
           <p>
-            I build applications that align elevated interfaces with dependable engineering. From
-            producing ecommerce platforms to leading student-led products, my work centers on
-            crafting tactile user journeys that feel effortless.
+            I build applications that combine polished frontend experiences with dependable backend
+            architecture. My work spans ecommerce, academic productivity, fitness analytics, and
+            engineering-focused software platforms.
           </p>
           <p>
-            The portfolio below pairs academic achievements with practical engagements to
-            demonstrate how I translate research, analytics, and collaboration into refined,
-            production-ready solutions.
+            The portfolio below reflects updated academic progress, applied engineering experience,
+            and product work centered on useful systems rather than portfolio-only prototypes.
           </p>
         </div>
       </article>
@@ -80,19 +91,22 @@ const Home = () => {
         <article className="content-card">
           <span className="eyebrow">Education</span>
           <ul className="list-reset experience-list">
-            <li className="experience-item">
-              <div className="section-meta">
-                <span>{education.institution}</span>
-                <span>{education.timeframe}</span>
-              </div>
-              <p className="section-highlight">{education.program}</p>
-              <p className="section-highlight">{education.gpa}</p>
-              <ul className="detail-list">
-                {education.details.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </li>
+            {education.map((item) => (
+              <li key={item.institution} className="experience-item">
+                <div className="section-meta">
+                  <span>{item.institution}</span>
+                  <span>{item.location}</span>
+                  <span>{item.timeframe}</span>
+                </div>
+                <p className="section-highlight">{item.program}</p>
+                <p className="section-highlight">{item.detail}</p>
+              </li>
+            ))}
+          </ul>
+          <ul className="detail-list">
+            {educationNotes.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
           </ul>
         </article>
 
