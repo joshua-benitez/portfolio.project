@@ -12,10 +12,10 @@ const contactLinks = [
     display: '980-254-7623',
   },
   {
-    href: 'https://linkedin.com/in/joshua-benitez',
+    href: 'http://www.linkedin.com/in/josh-benitez-09567133a',
     icon: 'fab fa-linkedin',
     label: 'LinkedIn',
-    display: 'linkedin.com/in/joshua-benitez',
+    display: 'linkedin.com/in/josh-benitez-09567133a',
   },
   {
     href: 'https://github.com/joshua-benitez',
@@ -32,7 +32,7 @@ const Contact = () => {
         <span className="eyebrow">Connect</span>
         <h1 className="page-heading">Contact</h1>
         <p className="page-subtitle">
-          Reach out for freelance, internship, or collaborative software opportunities. I can be
+          Reach out for internship, freelance, or collaborative software opportunities. I can be
           contacted directly through any of the channels below.
         </p>
       </header>
@@ -41,7 +41,7 @@ const Contact = () => {
         <div className="contact-overview">
           <span className="eyebrow">Studio Location</span>
           <p>Charlotte, North Carolina</p>
-          <p>Available for freelance and internship opportunities.</p>
+          <p>Available for freelance, internship, and collaborative software opportunities.</p>
         </div>
         <div className="contact-links">
           {contactLinks.map((link) => (

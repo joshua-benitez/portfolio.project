@@ -14,7 +14,7 @@ const navLinks = [
 
 const socialLinks = [
   {
-    href: 'https://linkedin.com/in/joshua-benitez',
+    href: 'http://www.linkedin.com/in/josh-benitez-09567133a',
     icon: 'fab fa-linkedin',
     label: 'LinkedIn',
   },

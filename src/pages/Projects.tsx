@@ -14,27 +14,27 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'PrimeLab',
+    title: 'Elyte',
     timeframe: 'Jan 2026 - Present',
     summary:
-      'LeetCode-style platform in development where every problem is designed to test behavior, not implementation, across browser, React, and Python execution environments.',
+      'Deployed coding assessment platform where problems are judged by behavior rather than implementation across browser, React, and Python execution environments.',
     details: [
-      'Built a coding assessment platform around one constraint: every problem must test behavior, not implementation, so the judge evaluates outcomes such as DOM state, API responses, and test results.',
-      'Designed a rule-handler registry for browser problems where new test logic is added through problem-specific handlers and metadata without modifying the core judge engine.',
-      'Engineered an async submission pipeline where FastAPI queues jobs to Redis, an isolated Pytest worker executes user code, and the frontend polls for structured pass/fail verdicts.',
+      'Built a coding assessment platform around one constraint, where problems are judged by behavior rather than implementation across browser, React, and Python environments.',
+      'Designed a rule-handler registry and shared problem schema so new problem types, metadata, and validation logic can be added without changing the core judge engine.',
+      'Engineered an asynchronous submission pipeline in which a FastAPI service queues jobs through Redis, isolated judge workers execute Python and browser-based evaluations, and the frontend polls for structured pass/fail verdicts.',
+      'Deployed the platform on Vercel with a Dockerized DigitalOcean backend stack using PostgreSQL, Redis, and HTTPS routing for production use.',
     ],
-    tech: ['Next.js', 'TypeScript', 'FastAPI', 'PostgreSQL', 'Zod', 'Redis', 'Docker'],
-    links: [{ label: 'In Development', href: '#' }],
+    tech: ['Next.js', 'TypeScript', 'FastAPI', 'PostgreSQL', 'Redis', 'Docker', 'Vercel', 'DigitalOcean'],
+    links: [{ label: 'Live Demo', href: 'https://www.elyte.page' }],
   },
   {
     title: 'Taper',
     timeframe: 'Oct 2025 - Present',
     summary:
-      'Body composition tracker built around the idea that waist measurements and weight trends together tell a truer fat-loss story than the scale alone.',
+      'Body composition tracker that combines weight and waist measurements with 7-day trend smoothing to separate fat-loss trend from day-to-day scale noise.',
     details: [
-      'Built around one insight: the scale lies, so Taper tracks waist measurements alongside weight and uses 7-day trend smoothing to reduce daily noise.',
-      'Implemented domain-specific fitness calculations from scratch, including Mifflin-St Jeor BMR, the Hodgdon and Beckett Navy body-fat method, and TDEE-based calorie targets, served through FastAPI with PostgreSQL and SQLAlchemy.',
-      'Built JWT authentication with access and refresh token rotation plus an interactive dashboard featuring trend lines, macro tracking, and projected goal-date estimation using Recharts.',
+      'Implemented Mifflin-St Jeor BMR, Navy body-fat, and TDEE calorie calculations in a FastAPI backend backed by PostgreSQL and SQLAlchemy.',
+      'Developed JWT authentication with access/refresh token rotation and an interactive dashboard featuring trend visualization, macro tracking, and goal-date projections.',
     ],
     tech: ['Next.js', 'TypeScript', 'FastAPI', 'PostgreSQL', 'SQLAlchemy'],
     links: [{ label: 'Live Demo', href: 'https://www.taper.dev' }],
@@ -45,9 +45,9 @@ const projects: Project[] = [
     summary:
       'Assignment planner that parses course syllabi and generates ranked task lists based on urgency, difficulty, and grade impact.',
     details: [
+      'Built an academic planning app that parses course syllabi and generates ranked task lists based on urgency, difficulty, and grade impact.',
       'Engineered a prioritization system that surfaces critical deadlines and quick-win tasks across a student’s full course load instead of treating all assignments equally.',
       'Built a dashboard with course filters, due-date grouping, and rank progression mechanics that incentivize consistent assignment completion and on-time work.',
-      'Shipped the app as a deployed academic planning product with authenticated student workflows.',
     ],
     tech: ['Next.js', 'TypeScript', 'React', 'Prisma', 'NextAuth.js'],
     links: [
@@ -63,8 +63,8 @@ const Projects = () => {
         <span className="eyebrow">Selected Work</span>
         <h1 className="page-heading">Projects</h1>
         <p className="page-subtitle">
-          A curated highlight of recent builds that blend analytics, automation, and tactile interface
-          design.
+          Recent product builds focused on practical systems, deployed software, and backend-heavy
+          application design.
         </p>
       </header>
 

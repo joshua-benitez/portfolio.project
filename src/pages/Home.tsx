@@ -1,17 +1,17 @@
 const education = [
   {
-    institution: 'Central Piedmont Community College',
-    location: 'Charlotte, NC',
-    program: 'A.A. in Computer Science Pathway',
-    timeframe: 'Expected May 2026',
-    detail: 'GPA 3.3 / 4.0',
-  },
-  {
     institution: 'University of North Carolina at Charlotte',
     location: 'Charlotte, NC',
-    program: 'B.S. in Computer Science',
+    program: 'B.S. in Computer Science, Incoming Transfer Student (Fall 2026)',
     timeframe: 'Expected May 2028',
-    detail: 'Incoming Transfer Student (Fall 2026)',
+    detail: '',
+  },
+  {
+    institution: 'Central Piedmont Community College',
+    location: 'Charlotte, NC',
+    program: 'A.A., Computer Science Pathway',
+    timeframe: 'Expected May 2026',
+    detail: 'GPA: 3.3 / 4.0',
   },
 ];
 
@@ -27,10 +27,9 @@ const experiences = [
     role: 'Freelance Full-Stack Developer',
     timeframe: 'Apr 2025 - Aug 2025',
     bullets: [
-      'Engineered a production-ready full-stack e-commerce platform for a startup fashion brand using Flask, JavaScript, and SQLite.',
-      'Implemented user authentication, persistent shopping cart, and dynamic product rendering from a SQLite database.',
-      'Translated client requirements and brand vision into technical specifications across the full development lifecycle.',
-      'Delivered a scalable foundation for future product launch and iteration.',
+      'Built a full-stack e-commerce platform for a startup fashion brand using Flask, JavaScript, and SQLite, translating client requirements into production-ready features.',
+      'Implemented user authentication, a persistent shopping cart, and database-backed product rendering.',
+      'Established a scalable codebase foundation to support future product expansion and launch.',
     ],
   },
   {
@@ -39,17 +38,17 @@ const experiences = [
     role: 'Customer Service Clerk',
     timeframe: 'Sep 2021 - Jan 2024',
     bullets: [
-      'Assisted in training new cashiers, sharing best practices and company policies to enhance team performance.',
+      'Trained new cashiers on store procedures and customer service standards.',
       'Promoted store loyalty programs and special promotions, resulting in a 15% increase in customer enrollments.',
-      'Accurately processed transactions, including cash, credit, and debit payments, ensuring 100% register balance accuracy at the end of each shift.',
+      'Handled high-volume cash and card transactions, ensuring 100% register balance accuracy at the end of each shift.',
     ],
   },
 ];
 
 const heroHighlights = [
-  'React, Next.js, FastAPI',
-  'Production-Minded Full-Stack Builds',
-  'Available for 2026 Opportunities',
+  'TypeScript, Next.js, FastAPI',
+  'Full-Stack Product Engineering',
+  'Incoming UNC Charlotte CS Transfer',
 ];
 
 const Home = () => {
@@ -60,7 +59,8 @@ const Home = () => {
         <h1 className="hero-title">Joshua Alejandro Benitez-Torres</h1>
         <p className="hero-lede">
           Full-stack developer and computer science student building software products with strong
-          backend systems, clear interfaces, and practical real-world value.
+          backend systems, clear interfaces, and practical real-world value across education,
+          productivity, and developer-focused platforms.
         </p>
         <div className="hero-meta">
           {heroHighlights.map((highlight) => (
@@ -99,7 +99,7 @@ const Home = () => {
                   <span>{item.timeframe}</span>
                 </div>
                 <p className="section-highlight">{item.program}</p>
-                <p className="section-highlight">{item.detail}</p>
+                {item.detail ? <p className="section-highlight">{item.detail}</p> : null}
               </li>
             ))}
           </ul>

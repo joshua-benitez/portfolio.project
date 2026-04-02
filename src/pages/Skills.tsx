@@ -6,26 +6,33 @@ interface SkillCategory {
 const skillCategories: SkillCategory[] = [
   {
     title: 'Programming Languages',
-    items: ['JavaScript', 'TypeScript', 'Python', 'Java', 'HTML', 'CSS', 'SQL'],
+    items: ['TypeScript', 'JavaScript', 'Python', 'Java', 'SQL', 'HTML/CSS'],
   },
   {
-    title: 'Frameworks & Tooling',
-    items: ['React', 'Next.js', 'FastAPI', 'Flask', 'Node.js', 'Tailwind CSS'],
+    title: 'Frontend',
+    items: ['React', 'Next.js', 'Tailwind CSS'],
   },
   {
-    title: 'Tools & Infrastructure',
+    title: 'Backend',
+    items: ['FastAPI', 'Flask', 'Node.js', 'Auth.js/NextAuth.js'],
+  },
+  {
+    title: 'Databases & ORM',
+    items: ['PostgreSQL', 'SQLite', 'Prisma', 'SQLAlchemy', 'Alembic'],
+  },
+  {
+    title: 'Infrastructure & Tooling',
     items: [
-      'PostgreSQL',
-      'SQLite',
-      'Prisma',
-      'SQLAlchemy',
-      'GitHub',
-      'Zod',
       'Docker',
-      'Pytest',
-      'Alembic',
       'Redis',
-      'pnpm/Turborepo',
+      'Git',
+      'GitHub',
+      'Pytest',
+      'Zod',
+      'pnpm',
+      'Turborepo',
+      'Vercel',
+      'DigitalOcean',
     ],
   },
 ];
